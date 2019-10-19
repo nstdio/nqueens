@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.github.nstdio'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    javaMainClass = "com.github.nstdio.nqueens.Main"
+    junitVersion = '5.5.2'
+}
+
+application {
+    mainClassName = javaMainClass
+}
+
+dependencies {
+    compile 'com.github.dpaukov:combinatoricslib3:3.3.0'
+
+    testImplementation 'org.assertj:assertj-core:3.13.2'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+}
+
+test {
+    useJUnitPlatform()
+}
