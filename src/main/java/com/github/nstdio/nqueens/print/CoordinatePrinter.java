@@ -22,6 +22,6 @@ class CoordinatePrinter implements SolutionPrinter {
             }
         }
 
-        out.append(')').append(System.lineSeparator());
+        out.append(')').println();
     }
 }

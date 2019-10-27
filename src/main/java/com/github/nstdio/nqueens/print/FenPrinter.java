@@ -38,6 +38,6 @@ class FenPrinter implements SolutionPrinter {
         }
 
         out.append("_w_-_-")
-                .append(System.lineSeparator());
+                .println();
     }
 }

@@ -25,7 +25,7 @@ class AsciiBoardPrinter implements SolutionPrinter {
 
             out.append(' ')
                     .append('|')
-                    .append(System.lineSeparator());
+                    .println();
         }
 
         printFrame(n);
@@ -40,6 +40,6 @@ class AsciiBoardPrinter implements SolutionPrinter {
             out.append('-');
         }
 
-        out.append('+').append(System.lineSeparator());
+        out.append('+').println();
     }
 }
